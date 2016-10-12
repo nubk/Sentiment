@@ -22,6 +22,7 @@ public class SentimentService {
     @POST
     @Consumes("text/plain")
     @Produces("text/plain")
+    public int getSentiment(String text) { 
         log.log(Level.INFO, "GameService.getSentiment(): {0}", text);
         int sentiment = analyser.findSentiment(text);
         log.log(Level.INFO, "Returning {0}", sentiment);      
